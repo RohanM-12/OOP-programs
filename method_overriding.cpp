@@ -12,8 +12,6 @@ class C1 {
  }
 
 
-
-
 };
 
 
@@ -29,10 +27,12 @@ class C2 : private C1
 int main()
 {
 
-
          C2 obj;
+         C1 obj2;
+         obj2.something();
          obj.something();
-
+         
+     
     
     return 0;
 
