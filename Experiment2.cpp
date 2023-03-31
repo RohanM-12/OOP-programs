@@ -4,6 +4,7 @@ using namespace std;
 
 class Vehicle
 {
+
 public:
     string Vehicle_brand;
     string Vehicle_color;
