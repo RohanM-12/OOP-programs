@@ -20,11 +20,6 @@ struct Book
         cin >> published_year;
         cout << "Enter the price of book :" << endl;
         cin >> cost;
-
-        // book_name=b_name;
-        // author_name=auth_name;
-        // published_year=p_year;
-        // c=cost;
     }
     void printData()
     {
