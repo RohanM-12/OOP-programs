@@ -51,12 +51,73 @@ public:
 
 int main()
 {
-    Vehicle V1("Toyota", "white", 2020, "2.7 L 4 cylinder", 260);
-    Vehicle V2("Ford", "Black", 2019, "V8 Turbocharged", "Pertrol", 7, 280);
 
-    cout << "------------Details of v1-------------" << endl;
-    V1.Display();
-    cout << "------------Details of v2-------------" << endl;
-    V2.Display();
+    int type = -1;
+
+    cout << "Enter Type 1/2: " << endl;
+    cin >> type;
+
+    if (type == 1)
+    {
+        string Vehicle_brand;
+
+        cout << "Enter Vehicle Brand :" << endl;
+        cin >> Vehicle_brand;
+
+        string Vehicle_color;
+        cout << "Enter Color :" << endl;
+        cin >> Vehicle_color;
+
+        int Production_year;
+        cout << "enter production year:" << endl;
+        cin >> Production_year;
+
+        string Engine = "null";
+        cout << "enter Engine variant:" << endl;
+        cin >> Engine;
+
+        int Top_speed;
+        cout << "enter Top speed:" << endl;
+        cin >> Top_speed;
+
+        Vehicle v1(Vehicle_brand, Vehicle_color, Production_year, Engine, Top_speed);
+        cout << "------------Details of v1-------------" << endl;
+        v1.Display();
+    }
+    else if (type == 2)
+    {
+        string Vehicle_brand;
+
+        cout << "Enter Vehicle Brand :" << endl;
+        cin >> Vehicle_brand;
+
+        string Vehicle_color;
+        cout << "Enter Color :" << endl;
+        cin >> Vehicle_color;
+
+        int Production_year;
+        cout << "enter production year:" << endl;
+        cin >> Production_year;
+
+        string Engine = "null";
+        cout << "enter Engine variant:" << endl;
+        cin >> Engine;
+
+        string Engine_Type = "null"; // Petrol/Diesel
+        cout << "Enter engine type P/D:" << endl;
+        cin >> Engine_Type;
+
+        int Milage = -1;
+        cout << "enter Milage:" << endl;
+        cin >> Milage;
+
+        int Top_speed;
+        cout << "enter Top speed:" << endl;
+        cin >> Top_speed;
+        Vehicle v2(Vehicle_brand, Vehicle_color, Production_year, Engine, Engine_Type, Milage, Top_speed);
+        cout << "------------Details of v2-------------" << endl;
+        v2.Display();
+    }
+
     return 0;
 }
