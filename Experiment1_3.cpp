@@ -4,15 +4,13 @@ int main()
 {
     string s1, s2, s3, s4;
 
-    s1 = "Information";
-    s2 = "Technology";
-
     cout << "Enter first string :" << endl;
     cin >> s1;
     cout << "Enter Second string :" << endl;
     cin >> s2;
 
     // copy
+    cout << "After Copying :" << endl;
     s3 = s1;
     s4 = s2;
     cout << s1 << " " << s2 << endl;
@@ -32,7 +30,7 @@ int main()
 
     // replacing string
     s3.replace(0, 6, "replaced");
-    cout << "replaced string :" << s3;
+    cout << "replaced string :" << s3 << endl;
 
     // calulate length
     cout << "Lengths of string :" << endl;

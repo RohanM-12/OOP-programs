@@ -1,0 +1,101 @@
+//multilevel inheritance with function overriding
+#include<iostream>
+#include<string>
+using namespace std;
+class company
+{
+    public:
+    int year;
+    string cname;
+    void getDetails()
+    {
+        cout<<"enter company name-"<<endl;
+        cin>>cname;
+        cout<<"enter company year-"<<endl;
+        cin>>year;
+    }
+    void putDetails()
+    {
+        cout<<"company name-"<<cname<<endl;
+        cout<<"company year-"<<year<<endl;
+    }
+};
+class manager:public company
+{
+    public:
+    int mid,msal;
+    string mname,mpost;
+    void getDetails()
+    {
+        company::getDetails();
+        cout<<"enter manager id-"<<endl;
+        cin>>mid;
+        cout<<"enter manager name-"<<endl;
+        cin>>mname;
+        cout<<"enter manager post-"<<endl;
+        cin>>mpost;
+        cout<<"enter manager salary-"<<endl;
+        cin>>msal;
+    }
+    void putDetails()
+    {
+        company::putDetails();
+        cout<<"manager id-"<<mid<<endl;
+        cout<<"manager name-"<<mname<<endl;
+        cout<<"manager post-"<<mpost<<endl;
+        cout<<"manager salary-"<<msal<<endl;
+    }  
+};
+class employee:public manager
+{
+    public:
+    int eid,esal;
+    string ename;
+    void getDetails()
+    {
+        manager::getDetails();
+        cout<<"enter employee id-"<<endl;
+        cin>>eid;
+        cout<<"enter employee name-"<<endl;
+        cin>>ename;
+        cout<<"enter employee salary-"<<endl;
+        cin>>esal;
+    }
+    void putDetails()
+    {
+        manager::putDetails();
+        cout<<"employee id-"<<eid<<endl;
+        cout<<"employee name-"<<ename<<endl;
+        cout<<"employee post-"<<esal<<endl;
+    }  
+};
+class labour:public employee
+{
+    public:
+    int lid,lsal;
+    string lname;
+    void getDetails()
+    {
+        employee::getDetails();
+        cout<<"enter labour id-"<<endl;
+        cin>>lid;
+        cout<<"enter labour name-"<<endl;
+        cin>>lname;
+        cout<<"enter labour salary-"<<endl;
+        cin>>lsal;
+    }
+    void putDetails()
+    {
+        employee::putDetails();
+        cout<<"labour id-"<<lid<<endl;
+        cout<<"labour name-"<<lname<<endl;
+        cout<<"labour post-"<<lsal<<endl;
+    }  
+};
+int main()
+{
+    labour obj;
+    obj.getDetails();
+    obj.putDetails();
+    return 0;
+}
